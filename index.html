@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="input.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>وب سرویس ترجمه</title>
+  </head>
+  <body class="bg-light2 dark:bg-dark0">
+    <header class="">
+      <nav
+        class="flex absolute justify-between shadow-md shadow-dark4 shadow-b-xl w-full items-center bg-light3"
+      >
+        <div
+          class="logo text-center select-none text-dark4 p-6 text-2xl font-bold"
+        >
+          <a href="index.html" target="_blank">امید ترانسلیت</a>
+        </div>
+        <i
+          id="changeTheme"
+          class="ph-fill ph-moon ml-4 dark:bg-dark4 dark:text-dark0 text-2xl hover:cursor-pointer p-4 bg-light4 rounded-2xl text-light0"
+        ></i>
+      </nav>
+    </header>
+    <main>
+      <!-- buttons -->
+      <div
+        class="flex min-h-screen space-y-1 lg:space-y-0 lg:flex-row lg:space-x-8 lg:gap-8 flex-col w-full justify-center items-center"
+      >
+        <div
+          class="space-y-1 showButtons flex hidden lg:items-center lg:justify-center mx-auto lg:space-y-0 lg:flex-row lg:space-x-8 lg:gap-8 flex-col justify-center items-center"
+        >
+          <p
+            class="text-center btns btnfa2En border-blue-500 select-none dark:border-blue-500 mb-4 lg:mb-0 hover:cursor-pointer hover:bg-blue-600 hover:duration-500 justify-center text-xl items-center flex block w-80 h-24 flex-col rounded-lg text-light0 bg-blue-500 shadow shadow-lg transition border outline outline-none"
+          >
+            ترجمه فارسی به انگلیسی
+          </p>
+          <p
+            class="text-center btns btnEn2fa border-orange-500 mb-4 dark:border-orange-500 select-none hover:cursor-pointer hover:bg-blue-600 hover:duration-500 justify-center text-xl items-center flex block w-80 h-24 flex-col rounded-lg text-light0 bg-orange-500 hover:bg-orange-600 shadow shadow-lg transition border outline outline-none"
+          >
+            ترجمه انگلیسی به فارسی
+          </p>
+        </div>
+        <div
+          class="flex flex-col loading hidden justify-center p-4 items-center space-y-0"
+        >
+          <img
+            src="icons/Spinner-1s-200px.svg"
+            class="filter animate-spin w-32 select-none dark:hidden"
+            alt="spinner-loading"
+          />
+          <img
+            src="icons/Spinner-1s-200px (1).svg"
+            class="filter animate-spin select-none w-32 hidden dark:block"
+            alt="spinner-loading"
+          />
+          <div
+            class="text-center select-none dark:text-light2 text-purple-700 text-xl"
+          >
+            در حال بارگزاری ....
+          </div>
+        </div>
+        <div
+          class="text-right translate-page hidden text-xl font-bold h-full p-4 pr-4 w-full"
+        >
+          <div class="select-none mb-6 dark:text-light4">
+            ترجمه خودکار فارسی به انگلیسی
+          </div>
+          <textarea
+            placeholder="لطفا کلمه یا جمله ای که می خواهید ترجمه شود را وارد نمایید ...."
+            class="outline outline-none p-4 text-sm mx-auto leading-8 dark:text-light1 mb-4 w-full dark:bg-dark1 placeholder:dark:text-gray-500 placeholder:text-[1rem] md:text-lg lg:text-xl"
+            name="text"
+            id="text"
+            cols="40"
+            rows="7"
+          ></textarea>
+          <textarea
+            placeholder="متن شما اینجا ترجمه خواهد شد"
+            class="outline outline-none translated-text dark:text-light1 text-md p-4 mx-auto w-full dark:bg-dark1 placeholder:dark:text-gray-500 placeholder:text-[1rem] md:text-lg lg:text-xl"
+            name="text"
+            id="text"
+            cols="40"
+            rows="7"
+            readonly
+          ></textarea>
+          <div
+            id="copy-button"
+            class="copy px-8 py-2 hover:cursor-pointer justify-end flex space-x-4 justify-center w-32 border text-xl border-dark1 rounded-lg roudned-lg"
+          >
+            <i
+              class="ph-fill ph-copy text-left dark:text-light4 text-3xl text-dark1"
+            ></i>
+            <div class="dark:text-light4">کپی</div>
+          </div>
+          <div
+            class="text-sm text-light4 text-center self-end self-items-end absolute mx-auto bottom-2"
+          >
+            robert.minia01@gmail.com
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
