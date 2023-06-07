@@ -66,12 +66,21 @@
         <div
           class="text-right translate-page hidden text-xl font-bold h-full p-4 pr-4 w-full"
         >
-          <div class="select-none mb-6 dark:text-light4">
-            ترجمه خودکار فارسی به انگلیسی
+          <div class="flex justify-between">
+            <div
+              class="select-none translate-text-element mb-6 dark:text-light4"
+            >
+              ترجمه خودکار فارسی به انگلیسی
+            </div>
+            <p
+              class="px-8 back py-2 rounded-lg mb-4 text-white outline-none border-lg bg-red-500 hover:cursor-pointer hover:opacity-70 hover:duration-500 border-red-500"
+            >
+              برگشت
+            </p>
           </div>
           <textarea
             placeholder="لطفا کلمه یا جمله ای که می خواهید ترجمه شود را وارد نمایید ...."
-            class="outline outline-none p-4 text-sm mx-auto leading-8 dark:text-light1 mb-4 w-full dark:bg-dark1 placeholder:dark:text-gray-500 placeholder:text-[1rem] md:text-lg lg:text-xl"
+            class="outline outline-none xl:placeholder:text-2xl p-4 text-sm mx-auto leading-8 dark:text-light1 mb-4 w-full dark:bg-dark1 placeholder:dark:text-gray-500 placeholder:text-[1rem] md:text-lg lg:text-xl"
             name="text"
             id="text"
             cols="40"

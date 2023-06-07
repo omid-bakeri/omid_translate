@@ -105,3 +105,49 @@ copy.addEventListener("click", () => {
       console.error("خطا در کپی کردن متن");
     });
 });
+
+const translate_text_element = document.querySelector(
+  ".translate-text-element"
+);
+
+//  btn english to farsi
+btnEn2fa.addEventListener("click", () => {
+  loading.classList.remove("hidden");
+  showButtons.classList.add("hidden");
+
+  setInterval(() => {
+    loading.classList.add("hidden");
+    translate_page.classList.remove("hidden");
+    translate_text_element.textContent = "ترجمه خودکار انگلیسی به فارسی";
+    text.placeholder =
+      "...Please enter the word or sentence you want to translate";
+    text.placeholder.style.textAlign = "left";
+  }, 2000);
+
+  const api_translate = async function (sentence) {
+    const api_element = await fetch(
+      `https://one-api.ir/translate/?token=274908:641729abd8413&action=google&lang=fa&q=${sentence}`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          console.log("کاربر کرامی خطایی از طرف سرور رخ داده است.");
+        } else {
+          console.log("success");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data.result);
+        translated_text.textContent = data.result;
+      })
+      .catch((err) => {
+        console.log("مشکلی رخ داده است لطفا دوباره امتحان کنید.");
+      });
+  };
+  text.addEventListener("input", () => {
+    text.style.textAlign = "left";
+    api_translate(text.value);
+  });
+});
+
+const back = document.querySelector(".back");
