@@ -47,8 +47,8 @@ const btnfa2En = document.querySelector(".btnfa2En");
 const btnEn2fa = document.querySelector(".btnEn2fa");
 // window load
 window.addEventListener("load", () => {
-  //   alert("به مترجم امید ترانسلیت خوش آمدید 😀");
-  showButtons.classList.toggle("hidden");
+  // alert("به مترجم امید ترانسلیت خوش آمدید 😀");
+  showButtons.classList.remove("hidden");
 });
 
 const loading = document.querySelector(".loading");
